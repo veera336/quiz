@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2023 at 10:50 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Generation Time: Mar 25, 2024 at 10:51 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -140,15 +140,60 @@ CREATE TABLE `user_info` (
   `quiz_score` int(11) NOT NULL DEFAULT 0,
   `level3` int(255) NOT NULL,
   `level4` int(245) NOT NULL,
-  `allpoints` int(255) NOT NULL
+  `int_level1` int(255) NOT NULL,
+  `int_level2` int(255) NOT NULL,
+  `int_level3` int(255) NOT NULL,
+  `int_level4` int(255) NOT NULL,
+  `exp_level1` int(255) NOT NULL,
+  `exp_level2` int(255) NOT NULL,
+  `exp_level3` int(255) NOT NULL,
+  `exp_level4` int(255) NOT NULL,
+  `allpoints` int(255) NOT NULL,
+  `beginner_score` int(255) NOT NULL,
+  `intermediate_score` int(255) NOT NULL,
+  `expert_score` int(255) NOT NULL,
+  `a_points` int(11) NOT NULL,
+  `a_otp` int(11) NOT NULL,
+  `a_quiz_score` int(11) NOT NULL DEFAULT 0,
+  `a_level3` int(255) NOT NULL,
+  `a_level4` int(245) NOT NULL,
+  `a_int_level1` int(255) NOT NULL,
+  `a_int_level2` int(255) NOT NULL,
+  `a_int_level3` int(255) NOT NULL,
+  `a_int_level4` int(255) NOT NULL,
+  `a_exp_level1` int(255) NOT NULL,
+  `a_exp_level2` int(255) NOT NULL,
+  `a_exp_level3` int(255) NOT NULL,
+  `a_exp_level4` int(255) NOT NULL,
+  `a_aptitudeallpoints` int(255) NOT NULL,
+  `f_points` int(11) NOT NULL,
+  `f_otp` int(11) NOT NULL,
+  `f_quiz_score` int(11) NOT NULL DEFAULT 0,
+  `f_level3` int(255) NOT NULL,
+  `f_level4` int(245) NOT NULL,
+  `f_int_level1` int(255) NOT NULL,
+  `f_int_level2` int(255) NOT NULL,
+  `f_int_level3` int(255) NOT NULL,
+  `f_int_level4` int(255) NOT NULL,
+  `f_exp_level1` int(255) NOT NULL,
+  `f_exp_level2` int(255) NOT NULL,
+  `f_exp_level3` int(255) NOT NULL,
+  `f_exp_level4` int(255) NOT NULL,
+  `f_allpoints` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user_info`
 --
 
-INSERT INTO `user_info` (`user_id`, `username`, `email`, `password`, `points`, `otp`, `quiz_score`, `level3`, `level4`, `allpoints`) VALUES
-(1, 'karan', 'karan123@gmail.com', '$2y$10$5.BPuTTROQFiTmtud7Eisu6PAGL8J786UdNA/jzjG..2F6gtvIhsS', 5, 0, 4, 3, 0, 12);
+INSERT INTO `user_info` (`user_id`, `username`, `email`, `password`, `points`, `otp`, `quiz_score`, `level3`, `level4`, `int_level1`, `int_level2`, `int_level3`, `int_level4`, `exp_level1`, `exp_level2`, `exp_level3`, `exp_level4`, `allpoints`, `beginner_score`, `intermediate_score`, `expert_score`, `a_points`, `a_otp`, `a_quiz_score`, `a_level3`, `a_level4`, `a_int_level1`, `a_int_level2`, `a_int_level3`, `a_int_level4`, `a_exp_level1`, `a_exp_level2`, `a_exp_level3`, `a_exp_level4`, `a_aptitudeallpoints`, `f_points`, `f_otp`, `f_quiz_score`, `f_level3`, `f_level4`, `f_int_level1`, `f_int_level2`, `f_int_level3`, `f_int_level4`, `f_exp_level1`, `f_exp_level2`, `f_exp_level3`, `f_exp_level4`, `f_allpoints`) VALUES
+(1, 'karan', 'karan123@gmail.com', '123', 6, 0, 0, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(65, 'meena', 'meena@gmail.com', '123', 10, 0, 5, 5, 0, 1, 0, 0, 0, 6, 5, 6, 6, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(66, 'dhatchumah', 'dhatchu1810@gmail.com', '123456', 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 8, 7, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(67, 'jeni', 'jeni123@gmailo.com', '123456', 3, 0, 5, 7, 5, 5, 3, 3, 6, 7, 8, 6, 6, 64, 0, 0, 0, 8, 0, 3, 9, 6, 2, 4, 3, 9, 7, 9, 10, 8, 78, 8, 0, 5, 9, 9, 4, 3, 2, 8, 9, 8, 10, 9, 84),
+(68, 'blessy', 'blessy123@gmail.com', '123456', 9, 0, 0, 0, 0, 0, 0, 0, 0, 9, 10, 8, 10, 46, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(70, 'thanu', 'thani1211@gmail.com', '123', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(71, 'len', 'len@gmail.com', '123', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -223,7 +268,7 @@ ALTER TABLE `quizzes`
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- Constraints for dumped tables
